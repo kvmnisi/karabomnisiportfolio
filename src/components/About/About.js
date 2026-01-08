@@ -120,9 +120,6 @@ const About = () => {
               <span>{social.name}</span>
             </a>
           ))}
-          <a href="#contact" className="btn btn-secondary">
-            <i className="fas fa-calendar"></i> Schedule a Call
-          </a>
         </div>
 
         {/* Introduction */}
