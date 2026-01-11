@@ -92,8 +92,8 @@ const About = () => {
         {/* Header */}
         <div className="about-header">
           <div className="about-avatar">
-            <div className="avatar-placeholder">
-              <i className="fas fa-user"></i>
+            <div className="avatar-image">
+              <img src = "/avatar.HEIC" alt = "Karabo Mnisi" className = "avatar-img" />
             </div>
           </div>
           <div className="about-intro">

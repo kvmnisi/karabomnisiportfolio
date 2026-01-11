@@ -2,6 +2,13 @@ import React from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  const scrollToFeatured = () => {
+    const featuredSection = document.getElementById('featured-work');
+    if (featuredSection) {
+      featuredSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="hero">
       <div className="container">
@@ -19,13 +26,13 @@ const Hero = () => {
           </p>
           
           <div className="flex gap-md justify-center" style={{ marginTop: '2rem' }}>
-            <a href="#about" className="btn btn-primary">
+            <button onClick={scrollToFeatured} className="btn btn-primary">
+              <i className="fas fa-play-circle" style={{ marginRight: '8px' }}></i>
+              View Featured Work
+            </button>
+            <a href="#about" className="btn btn-secondary">
               <i className="fas fa-user" style={{ marginRight: '8px' }}></i>
               About Me
-            </a>
-            <a href="#projects" className="btn btn-secondary">
-              <i className="fas fa-code" style={{ marginRight: '8px' }}></i>
-              View Projects
             </a>
           </div>
         </div>

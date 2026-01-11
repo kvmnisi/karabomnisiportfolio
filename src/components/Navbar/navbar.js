@@ -10,6 +10,7 @@ const Navbar = () => {
     { id: 'home', label: 'Home', icon: 'fas fa-home' },
     { id: 'about', label: 'About', icon: 'fas fa-user' },
     { id: 'projects', label: 'Projects', icon: 'fas fa-code' },
+    {id: 'designs', label: 'Designs', icon: 'fas fa-paint-brush'},
     { id: 'contact', label: 'Contact', icon: 'fas fa-envelope' }
   ];
 
