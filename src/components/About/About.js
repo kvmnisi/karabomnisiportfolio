@@ -93,7 +93,7 @@ const About = () => {
         <div className="about-header">
           <div className="about-avatar">
             <div className="avatar-image">
-              <img src = "/avatar.HEIC" alt = "Karabo Mnisi" className = "avatar-img" />
+              <img src = "" alt = "Karabo Mnisi" className = "avatar-img" />
             </div>
           </div>
           <div className="about-intro">
