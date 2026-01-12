@@ -93,7 +93,7 @@ const About = () => {
         <div className="about-header">
           <div className="about-avatar">
             <div className="avatar-image">
-              <img src = "" alt = "Karabo Mnisi" className = "avatar-img" />
+              <img src = "/src/components/About/Myavatar.jpg" alt = "Karabo Mnisi" className = "avatar-img" />
             </div>
           </div>
           <div className="about-intro">

@@ -13,10 +13,7 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="container">
         <div className="hero-content">
-          <div className="hero-badge">
-            <span>🚀</span>
-            <span>Featured Work</span>
-          </div>
+          
           
           <h1 className="text-balance">Designing, building, and communicating digital experiences</h1>
           
