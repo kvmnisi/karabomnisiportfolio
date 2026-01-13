@@ -93,7 +93,7 @@ const About = () => {
         <div className="about-header">
           <div className="about-avatar">
             <div className="avatar-image">
-              <img src = "/src/components/About/Myavatar.jpg" alt = "Karabo Mnisi" className = "avatar-img" />
+              <img src = "https://res.cloudinary.com/dcfvhjvff/image/upload/w_500,h_500,c_fill,g_face,f_auto,q_80,r_max/avatar_dgwf0c.heic" alt = "Karabo Mnisi" className = "avatar-img" />
             </div>
           </div>
           <div className="about-intro">

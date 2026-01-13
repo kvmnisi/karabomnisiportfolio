@@ -33,7 +33,7 @@ const Navbar = () => {
             className="nav-logo" 
             onClick={() => handleLinkClick('home')}
           >
-            <span style={{ color: '#ffcc33' }}>K</span>arabo <span style={{ color: '#ffcc33' }}>M</span>nisi
+            <span>K</span>arabo <span>M</span>nisi
           </a>
           
           {/* Desktop Navigation */}

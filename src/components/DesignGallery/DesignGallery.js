@@ -10,7 +10,7 @@ const DesignGallery = () => {
       title: "Mobile App UI Design",
       category: "mobile",
       description: "Clean and intuitive mobile application interface design",
-      image: "/images/designs/mobile-app-1.jpg",
+      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/v1768340552/lyle_MOTM_hxf95t.png",
       tags: ["Mobile", "UI Design", "Figma"]
     },
     {

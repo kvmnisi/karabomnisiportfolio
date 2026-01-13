@@ -92,7 +92,7 @@ setTimeout(() => setIsAutoPlaying(true), 8000);
 return (
 <section id="home" className="hero">
 <div className="hero-content">
-<span className="hero-eyebrow">Portfolio</span>
+<span className="hero-eyebrow">Karabo Mnisi's Portfolio</span>
     <h1 className="hero-title">
       Designing, building,<br />
       <span>and communicating</span><br />
