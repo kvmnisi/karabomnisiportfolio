@@ -13,7 +13,6 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <ProjectSlider />  {/* New Featured Work Slider */}
       <About />
       <Projects />
       <DesignGallery />

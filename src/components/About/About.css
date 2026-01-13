@@ -35,7 +35,7 @@
 .about-intro h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #ffcc33 0%, #ff9f1a 100%);
+  background: linear-gradient(135deg, #ff3333 0%, var(--accent-amber) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -50,7 +50,7 @@
 }
 
 .role-location i {
-  color: #ffcc33;
+  color: var(--accent-violet);
 }
 
 .separator {
@@ -82,14 +82,14 @@
 
 .social-link:hover {
   background-color: rgba(255, 204, 51, 0.1);
-  border-color: #ffcc33;
+  border-color: var(--accent-violet);
   color: var(--foreground);
   transform: translateY(-2px);
 }
 
 .social-link i {
   font-size: 1.2rem;
-  color: #ffcc33;
+  color: var(--accent-violet);
 }
 
 /* Content Sections */
@@ -126,7 +126,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #ffcc33 0%, #ff9f1a 100%);
+  background: linear-gradient(90deg, var(--accent-violet) 0%, var(--accent-amber) 100%);
   border-radius: 2px;
 }
 
@@ -152,7 +152,7 @@
 }
 
 .experience-card:hover {
-  border-color: #ffcc33;
+  border-color: var(--accent-amber);
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
@@ -187,7 +187,7 @@
 }
 
 .achievements-list li i {
-  color: #ffcc33;
+  color: var(--accent-violet);
   font-size: 1rem;
   margin-top: 0.25rem;
   flex-shrink: 0;
@@ -209,7 +209,7 @@
 }
 
 .study-card:hover {
-  border-color: #ffcc33;
+  border-color: var(--accent-violet);
   transform: translateY(-2px);
 }
 
@@ -235,7 +235,7 @@
 }
 
 .skill-card:hover {
-  border-color: #ffcc33;
+  border-color: var(--accent-violet);
   transform: translateY(-2px);
 }
 
@@ -257,10 +257,10 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: rgba(255, 204, 51, 0.1);
+  background-color: var(--accent-violet);
   border: 1px solid rgba(255, 204, 51, 0.2);
   border-radius: 50px;
-  color: rgba(255, 204, 51, 0.9);
+  color: #fafafa;
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -288,7 +288,7 @@
 }
 
 .language-item i {
-  color: #ffcc33;
+  color: var(--accent-violet);
   font-size: 1.1rem;
 }
 

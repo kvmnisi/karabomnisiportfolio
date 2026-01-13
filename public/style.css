@@ -2,9 +2,9 @@
 /* Theme Variables */
 :root {
   /* Light Mode Variables */
-  --background-light: #f2f0ef;
+  --background-light: #fafafa;
   --surface-light: #f8f9fa;
-  --surface-elevated-light: #f2f0ef;
+  --surface-elevated-light: #fdfdfd;
   --foreground-light: #11120D;
   --foreground-weak-light: hsl(0, 45%, 11%);
   --border-light: rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@
 
   /* Accent Colors (Same for both modes) */
   --accent-amber: #be2a2c;
-  --accent-violet: #d8cfbc;
+  --accent-violet: #2c6234;
   
   /* Spacing */
   --space-xs: 0.5rem;
