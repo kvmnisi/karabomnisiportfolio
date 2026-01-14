@@ -5,20 +5,20 @@ const Hero = () => {
 const projects = [
 {
 id: 1,
-title: "E-commerce Website Redesign",
-description: "Complete redesign of an e-commerce platform with focus on improving user experience and conversion rates by 40%.",
+title: "Download Karab",
+description: "My CV highlights not just my work but my dedication, eagerness to learn, and commitment to contributing meaningfully to any team.",
 tags: ["UI/UX Design", "Figma", "Web Design", "Responsive"],
 image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
 category: "Web Design",
 color: "#FF6B6B",
-liveLink: "#",
+liveLink: "/youtube-thumbnails",
 caseStudyLink: "#"
 },
 {
 id: 2,
-title: "Mobile Banking App",
-description: "User-centered mobile banking application with modern interface, biometric authentication, and secure transaction features.",
-tags: ["Mobile App", "Figma", "UI Design", "Prototyping"],
+title: "Design Thumbnails That Prove They Perform",
+description: "Choosing the wrong designer costs views. I show proven YouTube thumbnails so creators can hire with confidence.",
+tags: ["youtube design, thumbnails, content creators, visual branding"],
 image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
 category: "Mobile App",
 color: "#4ECDC4",

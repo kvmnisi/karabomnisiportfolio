@@ -15,7 +15,10 @@ const YouTubeThumbnails = () => {
     'y5vqbvCPfqU',  // Replace with your second video ID
     'vcgf80SbVWM',  // Replace with your third video ID
     'kPKdjPfQG6A',  // Replace with your fourth video ID
-    'y5vqbvCPfqU',  // Replace with your fifth video ID
+    'rsVTqF5_OoI',  // Replace with your fifth video ID
+    'o3Yafw9oq8k',
+    'Ajv5RO1kNzY',
+
     // Add up to 50 videos (YouTube API limit per request)
   ];
 
@@ -112,11 +115,6 @@ const YouTubeThumbnails = () => {
     <section id="youtube-thumbnails" className="youtube-thumbnails-section">
       <div className="container">
         <div className="section-header">
-          <h2>My YouTube Thumbnail Designs</h2>
-          <p className="section-subtitle">
-            Actual thumbnails I've designed for YouTube channels
-          </p>
-          
           {usingFallback && (
             <div className="api-notice">
               <p>
@@ -153,10 +151,6 @@ const YouTubeThumbnails = () => {
             <div className="thumbnails-grid">
               {displayVideos.map((video, index) => (
                 <div key={`${video.id}-${index}`} className="thumbnail-card">
-                  <div className="design-badge">
-                    <i className="fas fa-paint-brush"></i>
-                    My Design
-                  </div>
                   
                   <div className="thumbnail-image-container">
                     <img 
@@ -201,15 +195,6 @@ const YouTubeThumbnails = () => {
                       {video.title}
                     </h4>
                     
-                    <div className="design-meta">
-                      <span className="design-tag">
-                        <i className="fas fa-palette"></i> Thumbnail Design
-                      </span>
-                      <span className="design-tag">
-                        <i className="fas fa-user"></i> Client Work
-                      </span>
-                    </div>
-                    
                     <div className="thumbnail-actions">
                       <a 
                         href={`https://www.youtube.com/watch?v=${video.id}`}
@@ -247,19 +232,6 @@ const YouTubeThumbnails = () => {
                 </h3>
                 <p>Total Views</p>
               </div>
-              <div className="stat-item">
-                <h3>{displayVideos.length}</h3>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-
-            <div className="section-footer">
-              <p className="disclaimer">
-                <i className="fas fa-lightbulb"></i> 
-                These are actual YouTube thumbnails I've designed for clients. 
-                Each thumbnail increased click-through rates by 20-40%.
-                {usingFallback && ' Add your video IDs and API key to show your real work.'}
-              </p>
             </div>
           </>
         )}
