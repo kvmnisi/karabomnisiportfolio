@@ -7,7 +7,7 @@ const YouTubeThumbnails = () => {
   const [usingFallback, setUsingFallback] = useState(false);
 
   // Your YouTube API Key
-  const API_KEY = 'AIzaSyAwjaQFJapunduz_Bz8P-4vtV-SSog4kJA';
+  const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY || '';
 
   // YOUR ACTUAL VIDEO IDs - Replace these with your real video IDs
   const myVideoIds = [
@@ -36,7 +36,7 @@ const YouTubeThumbnails = () => {
   useEffect(() => {
     const fetchMyVideos = async () => {
       // If no API key, use fallback
-      if (!API_KEY || API_KEY === 'AIzaSyAwjaQFJapunduz_Bz8P-4vtV-SSog4kJA') {
+      if (!API_KEY) {
         console.log('Using fallback - Add YouTube API key for real data');
         setVideos(fallbackVideos);
         setUsingFallback(true);
