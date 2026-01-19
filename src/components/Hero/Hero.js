@@ -5,7 +5,7 @@ const Hero = () => {
 const projects = [
 {
 id: 1,
-title: "Download Karabo's CV",
+title: "Download CV",
 description: "My CV highlights not just my work but my dedication, eagerness to learn, and commitment to contributing meaningfully to any team.",
 tags: ["UI/UX Design", "Figma", "Web Design", "Responsive"],
 image: "https://res.cloudinary.com/dcfvhjvff/image/upload/v1768341366/IMG_1483_uxd8zx.jpg",
