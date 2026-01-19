@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Hero.css';
 
 const Hero = () => {
@@ -8,7 +8,7 @@ id: 1,
 title: "Download Karabo's CV",
 description: "My CV highlights not just my work but my dedication, eagerness to learn, and commitment to contributing meaningfully to any team.",
 tags: ["UI/UX Design", "Figma", "Web Design", "Responsive"],
-image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+image: "https://res.cloudinary.com/dcfvhjvff/image/upload/v1768341366/IMG_1483_uxd8zx.jpg",
 category: "Web Design",
 color: "#FF6B6B",
 liveLink: "/youtube-thumbnails",
@@ -63,6 +63,10 @@ caseStudyLink: "#"
 const [currentSlide, setCurrentSlide] = useState(0);
 const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+const nextSlide = useCallback(() => {
+setCurrentSlide((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+}, [projects.length]);
+
 // Auto-advance slides every 5 seconds
 useEffect(() => {
 let interval;
@@ -72,11 +76,9 @@ nextSlide();
 }, 5000);
 }
 return () => clearInterval(interval);
-}, [currentSlide, isAutoPlaying]);
+}, [currentSlide, isAutoPlaying, nextSlide]);
 
-const nextSlide = () => {
-setCurrentSlide((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
-};
+
 
 const prevSlide = () => {
 setCurrentSlide((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
