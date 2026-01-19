@@ -98,7 +98,7 @@ box-shadow: var(--shadow-glow);
 .btn-secondary {
 background-color: var(--accent-violet);
 border: 1px solid var(--border-strong);
-color: #fff;
+color: var(--foreground);
 }
 
 .btn-secondary:hover {
