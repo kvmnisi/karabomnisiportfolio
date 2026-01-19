@@ -5,58 +5,43 @@ const Hero = () => {
 const projects = [
 {
 id: 1,
-title: "Download CV",
-description: "My CV highlights not just my work but my dedication, eagerness to learn, and commitment to contributing meaningfully to any team.",
-tags: ["UI/UX Design", "Figma", "Web Design", "Responsive"],
-image: "https://res.cloudinary.com/dcfvhjvff/image/upload/v1768341366/IMG_1483_uxd8zx.jpg",
-category: "Web Design",
+title: "Plug Into Dave's World Interview",
+description: "Tune into my interview on MetroFM, talking about varsity esports in South Africa!",
+tags: ["Varsity Esports", "Public Relations", "Digital Media"],
+image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_north,w_1200,h_675,q_80/IMG_1483_uxd8zx.jpg",
+category: "Esports Media",
 color: "#FF6B6B",
-liveLink: "/youtube-thumbnails",
-caseStudyLink: "#"
+liveLink: "https://omny.fm/shows/the-touchdown/plug-into-daves-world-10",
 },
 {
 id: 2,
 title: "Design Thumbnails That Prove They Perform",
 description: "Choosing the wrong designer costs views. I show proven YouTube thumbnails so creators can hire with confidence.",
-tags: ["youtube design, thumbnails, content creators, visual branding"],
-image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-category: "Mobile App",
+tags: ["youtube design", "thumbnails", "content creators", "visual branding"],
+image: "https://res.cloudinary.com/dcfvhjvff/image/upload/v1768857325/IMG_0054_hjtzju.png",
+category: "Graphic Design",
 color: "#4ECDC4",
-liveLink: "#",
-caseStudyLink: "#"
+liveLink: "/youtube-thumbnails"
 },
 {
 id: 3,
-title: "Dashboard Analytics Platform",
-description: "Data visualization dashboard for business analytics with real-time metrics and interactive reporting tools.",
-tags: ["Dashboard", "Data Viz", "UI/UX", "React"],
+title: "Github University Projects",
+description: "Github repository of major projects such as a multi-agent football simulation (Robocup 3D Soccer Simulation League) featuring autonomous agents, basic physics, and team-based decision-making. Built on top of FC Portugal Database, with custom agent logic, role assignment, and tactical behaviours implemented by me.",
+tags: ["Python", "C++", "Data Analysis", "React"],
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-category: "Web Application",
+category: "Computer Science",
 color: "#45B7D1",
-liveLink: "#",
-caseStudyLink: "#"
+liveLink: "https://github.com/kvmnisi"
 },
 {
 id: 4,
-title: "Fitness Tracking App",
-description: "Comprehensive fitness application with workout planning, progress tracking, and social features.",
-tags: ["Mobile App", "UI Design", "Health Tech", "Prototype"],
-image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+title: "I Showcase My Drive and Skills in One Portfolio",
+description: "My downloadable portfolio highlights not just my work but my dedication, eagerness to learn, and commitment to contributing meaningfully to any team.",
+tags: [],
+image: "https://res.cloudinary.com/dcfvhjvff/image/upload/v1768856015/portfolio_xkyppe.png",
 category: "Mobile App",
 color: "#96CEB4",
-liveLink: "#",
-caseStudyLink: "#"
-},
-{
-id: 5,
-title: "Portfolio Website Design",
-description: "Modern portfolio website design showcasing UI/UX projects with interactive elements and animations.",
-tags: ["Web Design", "Figma", "UI/UX", "Portfolio"],
-image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-category: "Web Design",
-color: "#FFEAA7",
-liveLink: "#",
-caseStudyLink: "#"
+liveLink: "https://drive.google.com/file/d/1L4LJRydWWE1ZTxxeckzsOH9s8Ky6cjrw/view?usp=drive_link"
 }
 ];
 
@@ -166,13 +151,9 @@ return (
                 </div>
                 
                 <div className="project-links">
-                  <a href={project.caseStudyLink} className="btn btn-primary">
-                    <i className="fas fa-file-alt"></i>
-                    View Case Study
-                  </a>
                   <a href={project.liveLink} className="btn btn-secondary">
                     <i className="fas fa-external-link-alt"></i>
-                    Live Demo
+                    Check it out!
                   </a>
                 </div>
               </div>

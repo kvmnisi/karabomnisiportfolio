@@ -9,7 +9,7 @@ const About = () => {
     role: "Computer Science Graduate",
     location: "Africa/Johannesburg",
     email: "karabo1306@gmail.com",
-    languages: ["English", "Afrikaans"]
+    languages: ["English", "isiZulu", "SeTswana", "Afrikaans"]
   };
 
   const socialLinks = [
@@ -32,13 +32,24 @@ const About = () => {
       images: []
     },
     {
+      company: "University of the Witwatersrand E-Sport Game Club",
+      timeframe: "2023 - 2025",
+      role: "Social Media Manager and Vice Chairperson",
+      achievements: [
+        "Managed social media for Wits University E-Sports Club since 2023, creating content that engages gamers, introduces esports to South African university students, and positions esports as a competitive sport. Brought over 400% social media growth and 200 000+ accounts reached through community engagement and algorithm analysis. Responsible for generating content ideas (Instagram Reels, TikToks, posters, and photo-shoots), executing content creation (designing, capturing, editing, posting at algorithm-efficient times), and analysing performance metrics (engagement rates, views, platform analytics). Responsible for account management (engaging with other pages that are relevant in the space, answering DM's and FAQ's, keeping up with social media trends). ",
+        "Organised METROFM, VOWFM, SABC1 and Wits Vuvuzela guest appearances.",
+        "Led esports awareness campaigns in Wits University female residences, resulting in 20% new female members."
+      ],
+      images: ['https://res.cloudinary.com/dcfvhjvff/image/upload/v1768341669/IMG_2805_koahtu.jpg']
+    },
+    {
       company: "Freelance Work",
-      timeframe: "2021 - Present",
+      timeframe: "2024 - Present",
       role: "Web Developer & UI/UX Designer",
       achievements: [
-        "Created responsive portfolio websites for clients using modern web technologies",
-        "Implemented design systems and component libraries for consistent user experiences",
-        "Optimized website performance and accessibility standards"
+        "Created responsive portfolio websites for clients using modern web technologies.",
+        "Implemented design systems and component libraries for consistent user experiences.",
+        "Optimized website performance and accessibility standards."
       ],
       images: []
     }
@@ -46,12 +57,12 @@ const About = () => {
 
   const studies = [
     {
-      name: "Computer Science Degree",
-      description: "Studied software development, algorithms, data structures, and web technologies with focus on full-stack development."
+      name: "Computer Science Degree | University of the Witwatersrand",
+      description: "Through my Bachelor of Science studies at the University of the Witwatersrand, I developed a strong interdisciplinary foundation spanning computer science, mathematics, and psychology, with an emphasis on analytical thinking, problem-solving, and structured reasoning."
     },
     {
-      name: "UX/UI Design Courses",
-      description: "Completed specialized courses in user experience design, interface design, and human-computer interaction."
+      name: "Gnerative AI Course For Software Engineers",
+      description: ": Practical training in AI prompt engineering for code comprehension, debugging, refactoring, and documentation. Developed skills in AI-assisted software development, learning new technologies efficiently, and improving code quality, maintainability, and developer productivity. "
     }
   ];
 
@@ -76,8 +87,87 @@ const About = () => {
       ]
     },
     {
+  title: "Algorithm Design & Data Structures",
+  description: "Designing, implementing, and analysing efficient algorithms and core data structures with a focus on correctness and performance.",
+  tags: [
+    { name: "Algorithms", icon: "fas fa-project-diagram" },
+    { name: "Data Structures", icon: "fas fa-sitemap" },
+    { name: "Complexity Analysis", icon: "fas fa-chart-line" },
+    { name: "Problem Solving", icon: "fas fa-brain" }
+  ]
+},
+{
+  title: "Software Design & Engineering",
+  description: "Applying structured software design principles, modular architecture, and collaborative development practices.",
+  tags: [
+    { name: "Software Design", icon: "fas fa-drafting-compass" },
+    { name: "System Architecture", icon: "fas fa-layer-group" },
+    { name: "Code Modularity", icon: "fas fa-cubes" },
+    { name: "Software Projects", icon: "fas fa-code-branch" }
+  ]
+},
+{
+  title: "Computer Systems & Networks",
+  description: "Understanding how software interacts with hardware, operating systems, and networked environments.",
+  tags: [
+    { name: "Computer Organisation", icon: "fas fa-microchip" },
+    { name: "Computer Networks", icon: "fas fa-network-wired" },
+    { name: "Parallel Computing", icon: "fas fa-tasks" },
+    { name: "Performance Reasoning", icon: "fas fa-tachometer-alt" }
+  ]
+},
+{
+  title: "Databases & Data Management",
+  description: "Working with structured data concepts, relational modelling, and foundational database systems.",
+  tags: [
+    { name: "Database Fundamentals", icon: "fas fa-database" },
+    { name: "Relational Modelling", icon: "fas fa-table" },
+    { name: "Data Structuring", icon: "fas fa-layer-group" }
+  ]
+},
+{
+  title: "Graphics & Visual Computing",
+  description: "Developing visual representations and understanding graphical pipelines for interactive and visual systems.",
+  tags: [
+    { name: "Computer Graphics", icon: "fas fa-cube" },
+    { name: "Visualisation", icon: "fas fa-chart-area" },
+    { name: "Visual Computing", icon: "fas fa-eye" }
+  ]
+},
+{
+  title: "Mathematics & Quantitative Analysis",
+  description: "Applying mathematical reasoning, abstraction, and statistical thinking to technical and analytical problems.",
+  tags: [
+    { name: "Calculus", icon: "fas fa-square-root-alt" },
+    { name: "Linear Algebra", icon: "fas fa-vector-square" },
+    { name: "Applied Mathematics", icon: "fas fa-calculator" },
+    { name: "Statistics", icon: "fas fa-chart-bar" },
+    { name: "Abstract Reasoning", icon: "fas fa-infinity" }
+  ]
+},
+{
+  title: "Human-Centred & Cognitive Analysis",
+  description: "Understanding human behaviour, cognition, and decision-making in the workplace to inform better systems that boost organisational culture and intrinsic motivation among employees.",
+  tags: [
+    { name: "Industrial Psychology", icon: "fas fa-brain" },
+    { name: "Human Behaviour Analysis", icon: "fas fa-users" },
+    { name: "Decision-Making Theory", icon: "fas fa-balance-scale" }
+  ]
+},
+{
+  title: "Analytical & Research Skills",
+  description: "Approaching complex problems with structured reasoning, abstraction, and independent technical learning.",
+  tags: [
+    { name: "Analytical Thinking", icon: "fas fa-search" },
+    { name: "Formal Reasoning", icon: "fas fa-shapes" },
+    { name: "Proof Techniques", icon: "fas fa-check-double" },
+    { name: "Technical Writing", icon: "fas fa-file-alt" }
+  ]
+},
+
+    {
       title: "Digital Media",
-      description: "Content creation and digital media production for esports and gaming communities.",
+      description: "Skilled in Figma, Adobe Creative Cloud, and Canva for creating engaging designs, short and long form content across all social media platforms.",
       tags: [
         { name: "Video Editing", icon: "fas fa-video" },
         { name: "Graphics", icon: "fas fa-image" },
@@ -133,6 +223,7 @@ const About = () => {
               both functional and visually compelling.
             </p>
             <p>
+              For teams and hiring managers seeking a motivated graduate, I am a high-drive Computer Science graduate who aligns technical ability with organisational culture by combining disciplined learning, real-world digital execution, and a proven willingness to grow, contribute, and add value beyond my role.
               With a strong foundation in both development and design, I focus on creating seamless 
               user experiences that bridge the gap between technical implementation and user needs. 
               Whether it's developing web applications or designing intuitive interfaces, I strive to 

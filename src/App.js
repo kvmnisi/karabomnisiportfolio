@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/navbar';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
-import Projects from './components/Projects/Projects';
 import DesignGallery from './components/DesignGallery/DesignGallery';
 import Footer from './components/Footer/Footer';
 import YouTubeThumbnailsPage from './pages/YouTubeThumbnailsPage';
@@ -19,7 +18,6 @@ function App() {
               <Navbar />
               <Hero />
               <About />
-              <Projects />
               <DesignGallery />
               <Footer />
             </>
