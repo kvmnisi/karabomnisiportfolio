@@ -5,7 +5,7 @@ const Hero = () => {
 const projects = [
 {
 id: 1,
-title: "Download Karab",
+title: "Download Karabo's CV",
 description: "My CV highlights not just my work but my dedication, eagerness to learn, and commitment to contributing meaningfully to any team.",
 tags: ["UI/UX Design", "Figma", "Web Design", "Responsive"],
 image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
