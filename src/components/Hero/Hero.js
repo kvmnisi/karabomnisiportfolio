@@ -39,7 +39,7 @@ title: "I Showcase My Drive and Skills in One Portfolio",
 description: "My downloadable portfolio highlights not just my work but my dedication, eagerness to learn, and commitment to contributing meaningfully to any team.",
 tags: [],
 image: "https://res.cloudinary.com/dcfvhjvff/image/upload/v1768856015/portfolio_xkyppe.png",
-category: "Mobile App",
+category: "PDF",
 color: "#96CEB4",
 liveLink: "https://drive.google.com/file/d/1L4LJRydWWE1ZTxxeckzsOH9s8Ky6cjrw/view?usp=drive_link"
 }

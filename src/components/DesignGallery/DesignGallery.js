@@ -1,123 +1,176 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/navbar';
+import Footer from '../Footer/Footer';
 import './DesignGallery.css';
 
 const DesignGallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  
+  const sectionRef = useRef(null);
+  const imagesRef = useRef([]);
+
+  // Your design data - replace with your actual designs
   const designs = [
     {
       id: 1,
-      title: "Mobile App UI Design",
-      category: "mobile",
-      description: "Clean and intuitive mobile application interface design",
-      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/v1768340552/lyle_MOTM_hxf95t.png",
-      tags: ["Mobile", "UI Design", "Figma"]
+      title: "Brand Identity Design",
+      description: "Complete brand identity for a tech startup",
+      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_auto,w_432,h_540,q_80/game_and_frames_exkslz.png",
+      dataColor: "#ffb91c",
+      category: "Branding",
+      year: "2023",
+      client: "TechCorp Inc."
     },
     {
       id: 2,
-      title: "Website Landing Page",
-      category: "web",
-      description: "Modern landing page design with attention to conversion",
-      image: "/images/designs/web-landing.jpg",
-      tags: ["Web", "Landing Page", "UI/UX"]
+      title: "Mobile App UI/UX",
+      description: "User interface design for a fitness tracking app",
+      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_auto,w_432,h_540,q_80/MATCHDAY1_idegys.png",
+      dataColor: "#00251b",
+      category: "UI/UX",
+      year: "2023",
+      client: "FitTrack",
     },
     {
       id: 3,
-      title: "Dashboard Design",
-      category: "dashboard",
-      description: "Data visualization dashboard with user-friendly interface",
-      image: "/images/designs/dashboard.jpg",
-      tags: ["Dashboard", "Data Viz", "UI Design"]
+      title: "Packaging Design",
+      description: "Eco-friendly packaging for a skincare brand",
+      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_auto,w_432,h_540,q_80/lyle_MOTM_hxf95t.png",
+      dataColor: "#dbdfcf",
+      category: "Packaging",
+      year: "2022",
+      client: "NatureGlow"
     },
     {
       id: 4,
-      title: "Brand Identity",
-      category: "branding",
-      description: "Complete brand identity design including logo and guidelines",
-      image: "/images/designs/branding.jpg",
-      tags: ["Branding", "Logo", "Identity"]
+      title: "Website Redesign",
+      description: "Complete overhaul of an e-commerce platform",
+      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_auto,w_432,h_540,q_80/commannouncement_dpv46e.png",
+      dataColor: "#002d72",
+      category: "Web Design",
+      year: "2023",
+      client: "StyleStore"
     },
     {
       id: 5,
-      title: "Mobile App Prototype",
-      category: "mobile",
-      description: "Interactive prototype for fitness tracking application",
-      image: "/images/designs/mobile-app-2.jpg",
-      tags: ["Mobile", "Prototype", "Figma"]
-    },
-    {
-      id: 6,
-      title: "E-commerce Website",
-      category: "web",
-      description: "Complete e-commerce website design with product showcase",
-      image: "/images/designs/ecommerce.jpg",
-      tags: ["E-commerce", "Web Design", "UI/UX"]
+      title: "Typography Design",
+      description: "Custom typeface for a publication",
+      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_auto,w_432,h_840,q_80/IMG_2503_p3du1k.png",
+      dataColor: "#b0e6db",
+      category: "Typography",
+      year: "2023",
+      client: "TypeMag",
+      pdfUrl: "https://res.cloudinary.com/dcfvhjvff/raw/upload/v1768341366/typography-case-study.pdf",
+      fileName: "Typography-Case-Study.pdf"
     }
   ];
 
-  const categories = [
-    { id: 'all', label: 'All Designs' },
-    { id: 'mobile', label: 'Mobile Apps' },
-    { id: 'web', label: 'Web Design' },
-    { id: 'dashboard', label: 'Dashboards' },
-    { id: 'branding', label: 'Branding' }
-  ];
+  useEffect(() => {
+    const section = sectionRef.current;
+    const images = imagesRef.current;
 
-  const filteredDesigns = selectedCategory === 'all' 
-    ? designs 
-    : designs.filter(design => design.category === selectedCategory);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            
+            // Change background color based on data-color attribute
+            const color = entry.target.getAttribute("data-color");
+            if (color && section) {
+              section.style.backgroundColor = color;
+            }
+            
+            // Show design info
+            const designId = entry.target.getAttribute("data-id");
+            const designInfo = document.querySelector(`.design-info-${designId}`);
+            if (designInfo) {
+              designInfo.classList.add("show");
+            }
+          } else {
+            entry.target.classList.remove("animate");
+            const designId = entry.target.getAttribute("data-id");
+            const designInfo = document.querySelector(`.design-info-${designId}`);
+            if (designInfo) {
+              designInfo.classList.remove("show");
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+        rootMargin: "0px 0px -50% 0px"
+      }
+    );
+
+    // Observe all images
+    images.forEach((img) => {
+      if (img) observer.observe(img);
+    });
+
+    // Cleanup
+    return () => {
+      images.forEach((img) => {
+        if (img) observer.unobserve(img);
+      });
+    };
+  }, []);
 
   return (
-    <section id="designs" className="design-gallery">
-      <div className="container">
-        <h2 className="text-center">Design Portfolio</h2>
-        <p className="text-center" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
-          A collection of my UI/UX design work showcasing different styles and projects
-        </p>
-        
-        {/* Category Filter */}
-        <div className="category-filter">
-          {categories.map(category => (
-            <button
-              key={category.id}
-              className={`category-btn ${selectedCategory === category.id ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(category.id)}
-            >
-              {category.label}
-            </button>
-          ))}
+    <div className="designs-page">
+      <Navbar />
+      
+      <div className="designs-header">
+        <div className="container">
+          <h1>Design Portfolio</h1>
+          <p className="subtitle">A curated collection of my design work across various mediums</p>
         </div>
-        
-        {/* Design Grid */}
-        <div className="designs-grid">
-          {filteredDesigns.map(design => (
-            <div key={design.id} className="design-card">
-              <div className="design-image-container">
-                <img 
-                  src={design.image} 
+      </div>
+
+      <main className="designs-main">
+        {/* Instructions */}
+        <div className="instructions">
+          <div className="container">
+            <p><i className="fas fa-mouse-pointer"></i> Scroll horizontally to view designs</p>
+            <p><i className="fas fa-palette"></i> Background changes with each design</p>
+          </div>
+        </div>
+
+        {/* Horizontal Gallery */}
+        <div className="gallery-container">
+          <section 
+            ref={sectionRef} 
+            className="designs-gallery"
+            style={{ backgroundColor: designs[0]?.dataColor }}
+          >
+            {designs.map((design, index) => (
+              <div key={design.id} className="design-item">
+                <img
+                  ref={el => imagesRef.current[index] = el}
+                  src={design.image}
+                  data-color={design.dataColor}
+                  data-id={design.id}
                   alt={design.title}
                   className="design-image"
                 />
-                <div className="design-overlay">
-                  <button className="view-details-btn">
-                    <i className="fas fa-expand"></i>
-                  </button>
+                
+                {/* Design Info Overlay */}
+                <div className={`design-info design-info-${design.id}`}>
+                  <div className="design-category">{design.category}</div>
+                  <h3 className="design-title">{design.title}</h3>
+                  <p className="design-description">{design.description}</p>
+                  <div className="design-meta">
+                    <span className="design-year">{design.year}</span>
+                    <span className="design-client">{design.client}</span>
+                  </div>
                 </div>
               </div>
-              <div className="design-info">
-                <h3>{design.title}</h3>
-                <p>{design.description}</p>
-                <div className="design-tags">
-                  {design.tags.map((tag, index) => (
-                    <span key={index} className="design-tag">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </section>
         </div>
-      </div>
-    </section>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 

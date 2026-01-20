@@ -18,7 +18,21 @@ const YouTubeThumbnails = () => {
     'rsVTqF5_OoI',  // Replace with your fifth video ID
     'o3Yafw9oq8k',
     'Ajv5RO1kNzY',
-
+    'p3HSWKjilOU',
+    'eybgddKwLKU',
+    'oSwfEvQZleA',
+    'n1nt9xhCLIc',
+    'A9laX_K0wDs',
+    'k0CFjIF6mrg',
+    'Pkc9RXus4gY',
+    'Vl6XeFkTuns',
+    'rWuWq_lQXUw',
+    'Dim53F_IkOA',
+    'AEFfj9uplRQ',
+    '8MbYjVhUYkU&',
+    'MIEhmFShDxw',
+    'K2lxmnNcj1Y',
+    'HRxkO80pRwY',
     // Add up to 50 videos (YouTube API limit per request)
   ];
 
@@ -143,7 +157,7 @@ const YouTubeThumbnails = () => {
           <div className="loading-container">
             <div className="loading-spinner">
               <i className="fas fa-spinner fa-spin"></i>
-              <p>Loading your thumbnail designs...</p>
+              <p>Loading from YouTube...</p>
             </div>
           </div>
         ) : (
@@ -218,19 +232,15 @@ const YouTubeThumbnails = () => {
               ))}
             </div>
 
-            <div className="stats-container">
-              <div className="stat-item">
-                <h3>{displayVideos.length}</h3>
-                <p>Thumbnails Designed</p>
-              </div>
-              <div className="stat-item">
-                <h3>
+            <div className="stats shadow">
+              <div className="stat">
+                <div class="stat-title">Total YouTube Views</div>
+                <div class="stat-value">
                   {displayVideos.reduce((sum, video) => {
                     const views = parseInt(video.views.replace(/,/g, '')) || 0;
                     return sum + views;
                   }, 0).toLocaleString()}
-                </h3>
-                <p>Total Views</p>
+                </div>
               </div>
             </div>
           </>

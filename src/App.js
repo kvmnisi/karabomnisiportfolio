@@ -18,11 +18,11 @@ function App() {
               <Navbar />
               <Hero />
               <About />
-              <DesignGallery />
               <Footer />
             </>
           } />
           <Route path="/youtube-thumbnails" element={<YouTubeThumbnailsPage />} />
+          <Route path="/designs" element={<DesignGallery />} />
         </Routes>
       </div>
     </Router>

@@ -14,9 +14,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <p className="footer-text">
-            © {new Date().getFullYear()} / Karabo Mnisi / 
+            © {new Date().getFullYear()} | Karabo Mnisi 
             <span style={{ color: '#ffcc33', marginLeft: '8px' }}>
-              Computer Science Student | UX/UI & Digital Media
             </span>
           </p>
           

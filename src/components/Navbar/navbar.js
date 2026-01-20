@@ -13,7 +13,7 @@ const navigate = useNavigate();
 const navLinks = [
 { id: 'home', label: 'Home', icon: 'fas fa-home', isHash: true },
 { id: 'about', label: 'About', icon: 'fas fa-user', isHash: true },
-{ id: 'designs', label: 'Designs', icon: 'fas fa-paint-brush', isHash: true },
+{ id: 'designs', label: 'Designs', icon: 'fas fa-paint-brush', isHash: false, path: '/designs' },
 {
 id: 'youtube-thumbnails',
 label: 'YouTube Thumbnails',
