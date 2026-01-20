@@ -41,7 +41,7 @@ text
         <h2>Need Custom YouTube Thumbnails?</h2>
         <p>I create eye-catching thumbnails that increase click-through rates and engagement.</p>
         <div className="cta-buttons">
-          <a href="#contact" className="btn btn-primary">
+          <a href="#contact" className="btn btn-ter">
             <i className="fas fa-envelope"></i>
             Contact Me
           </a>

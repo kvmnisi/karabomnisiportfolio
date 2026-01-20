@@ -25,7 +25,7 @@ const DesignGallery = () => {
       title: "Mobile App UI/UX",
       description: "User interface design for a fitness tracking app",
       image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_auto,w_432,h_540,q_80/MATCHDAY1_idegys.png",
-      dataColor: "#00251b",
+      dataColor: "#208167",
       category: "UI/UX",
       year: "2023",
       client: "FitTrack",
@@ -81,18 +81,18 @@ const DesignGallery = () => {
             }
             
             // Show design info
-            const designId = entry.target.getAttribute("data-id");
-            const designInfo = document.querySelector(`.design-info-${designId}`);
-            if (designInfo) {
-              designInfo.classList.add("show");
-            }
-          } else {
-            entry.target.classList.remove("animate");
-            const designId = entry.target.getAttribute("data-id");
-            const designInfo = document.querySelector(`.design-info-${designId}`);
-            if (designInfo) {
-              designInfo.classList.remove("show");
-            }
+          //   const designId = entry.target.getAttribute("data-id");
+          //   const designInfo = document.querySelector(`.design-info-${designId}`);
+          //   if (designInfo) {
+          //     designInfo.classList.add("show");
+          //   }
+          // } else {
+          //   entry.target.classList.remove("animate");
+          //   const designId = entry.target.getAttribute("data-id");
+          //   const designInfo = document.querySelector(`.design-info-${designId}`);
+          //   if (designInfo) {
+          //     designInfo.classList.remove("show");
+          //   }
           }
         });
       },
@@ -120,20 +120,20 @@ const DesignGallery = () => {
       <Navbar />
       
       <div className="designs-header">
-        <div className="container">
           <h1>Design Portfolio</h1>
-          <p className="subtitle">A curated collection of my design work across various mediums</p>
-        </div>
+          <p className="subtitle">Skilled in Figma, Adobe Creative Cloud, and Canva for creating engaging designs, short and long form content across all social media platforms.
+
+</p>
       </div>
 
       <main className="designs-main">
-        {/* Instructions */}
+        {/* Instructions
         <div className="instructions">
           <div className="container">
             <p><i className="fas fa-mouse-pointer"></i> Scroll horizontally to view designs</p>
             <p><i className="fas fa-palette"></i> Background changes with each design</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Horizontal Gallery */}
         <div className="gallery-container">
@@ -154,7 +154,7 @@ const DesignGallery = () => {
                 />
                 
                 {/* Design Info Overlay */}
-                <div className={`design-info design-info-${design.id}`}>
+                {/* <div className={`design-info design-info-${design.id}`}>
                   <div className="design-category">{design.category}</div>
                   <h3 className="design-title">{design.title}</h3>
                   <p className="design-description">{design.description}</p>
@@ -162,13 +162,28 @@ const DesignGallery = () => {
                     <span className="design-year">{design.year}</span>
                     <span className="design-client">{design.client}</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             ))}
           </section>
         </div>
-      </main>
 
+      <div className="page-cta">
+        <h2>Need Custom YouTube Thumbnails?</h2>
+        <p>I create eye-catching thumbnails that increase click-through rates and engagement.</p>
+        <div className="cta-buttons">
+          <a href="https://behance.net/karabomnisi" className="btn btn-ter">
+            <i className="fab fa-behance"></i>
+            Full Behance Portfolio
+          </a>
+          <a href="/" className="btn btn-secondary">
+            <i className="fas fa-arrow-left"></i>
+            Back to Home
+          </a>
+        </div>
+    </div>
+      </main>
+      
       <Footer />
     </div>
   );

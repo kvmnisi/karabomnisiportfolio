@@ -214,7 +214,7 @@ const YouTubeThumbnails = () => {
                         href={`https://www.youtube.com/watch?v=${video.id}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-primary"
+                        className="btn btn-ter"
                       >
                         <i className="fab fa-youtube"></i> View on YouTube
                       </a>

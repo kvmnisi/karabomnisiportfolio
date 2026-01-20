@@ -9,11 +9,6 @@
 /* Header */
 .designs-header {
   padding: 6rem 0 3rem;
-  background: linear-gradient(135deg, 
-    rgba(190, 42, 44, 0.1) 0%, 
-    transparent 100%
-  );
-  border-bottom: 1px solid var(--border);
   text-align: center;
 }
 
@@ -69,7 +64,6 @@
 .instructions .container {
   display: flex;
   justify-content: center;
-  gap: 3rem;
   flex-wrap: wrap;
 }
 
@@ -91,6 +85,7 @@
   min-height: 600px;
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
 /* Horizontal Gallery */
@@ -126,12 +121,11 @@
   position: relative;
   margin-right: 25vw;
   scroll-snap-align: center;
-  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .design-item:first-child {
-  margin-left: 10vw;
+  margin-left: 25vw;
 }
 
 .design-item:hover {
@@ -149,33 +143,32 @@
   object-position: center;
   border-radius: 16px;
   flex-shrink: 0;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.433);
   opacity: 0.3;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
 }
 
 .design-image.animate {
   opacity: 1;
   transform: translateY(0);
-  border-color: var(--accent-amber);
+  border-color: var(--foreground);
   box-shadow: 0 50px 120px rgba(0, 0, 0, 0.5), 
-              0 0 0 1px var(--accent-amber);
+              0 0 0 1px var(--foreground);
 }
 
 /* Design Info Overlay */
-.design-info {
+/* .design-info {
   position: absolute;
   bottom: -100px;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.015);
+  background: rgba(0, 0, 0, 0.518);
   backdrop-filter: blur(1px);
   padding: 1.5rem;
   border-radius: 12px;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(21px);
   transition: all 0.5s ease;
   pointer-events: none;
   z-index: 10;
@@ -186,7 +179,7 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  bottom: -120px;
+  bottom: 0px;
 }
 
 .design-category {
@@ -224,30 +217,7 @@
   padding: 0.25rem 0.75rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-}
-
-.download-btn {
-  background: var(--accent-amber);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-  width: 100%;
-  justify-content: center;
-}
-
-.download-btn:hover {
-  background: #d62c2e;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(190, 42, 44, 0.3);
-}
+} */
 
 /* Fixed Info Panel */
 .fixed-info-panel {
@@ -265,7 +235,6 @@
   align-items: center;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 1rem 1.5rem;
   max-width: 1200px;
@@ -314,42 +283,77 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .design-image {
-    width: 50vw;
-    min-width: 400px;
+    width: 45vh; /* Slightly smaller on large tablets */
+    height: 36vh; /* Maintain aspect ratio */
+  }
+  
+  .design-item {
+    margin-right: 20vw; /* Reduce spacing */
+  }
+  
+  .design-item:first-child {
+    margin-left: 20vw;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .designs-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   
   .subtitle {
     font-size: 1.1rem;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+  }
+  
+  .stats {
+    gap: 2rem;
+  }
+  
+  .designs-gallery {
+    padding: 0 8vw; /* Reduce side padding */
+  }
+  
+  .design-image {
+    width: 40vh;
+    height: 32vh;
+    min-width: 300px;
+    min-height: 430px; /* Maintain 1080x1375 ratio */
+  }
+  
+  .design-item {
+    margin-right: 15vw;
+  }
+  
+  .design-item:first-child {
+    margin-left: 15vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .designs-header {
+    padding: 4rem 0 2rem;
+  }
+  
+  .designs-header h1 {
+    font-size: 2.3rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin: 0 auto 1.5rem;
   }
   
   .stats {
     gap: 1.5rem;
   }
   
-  .designs-gallery {
-    padding: 0 5vw;
+  .stat .number {
+    font-size: 2rem;
   }
   
-  .design-item {
-    margin-right: 5vw;
-  }
-  
-  .design-item:first-child {
-    margin-left: 5vw;
-  }
-  
-  .design-image {
-    width: 80vw;
-    min-width: 300px;
-    height: 40vh;
-    min-height: 300px;
+  .stat .label {
+    font-size: 0.8rem;
   }
   
   .instructions .container {
@@ -358,39 +362,248 @@
     align-items: center;
   }
   
-  .fixed-info-panel .container {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .designs-header {
-    padding: 4rem 0 2rem;
+  .gallery-container {
+    height: calc(100vh - 280px); /* Adjust height */
+    min-height: 550px;
   }
   
-  .designs-header h1 {
-    font-size: 2rem;
+  .designs-gallery {
+    padding: 0 5vw;
   }
   
   .design-image {
-    width: 90vw;
-    min-width: 280px;
-    height: 35vh;
-    min-height: 250px;
+    width: 35vh;
+    height: 28vh;
+    min-width: 250px;
+    min-height: 375px; /* Maintain aspect ratio */
+  }
+  
+  .design-item {
+    margin-right: 10vw;
+  }
+  
+  .design-item:first-child {
+    margin-left: 10vw;
   }
   
   .design-info {
     padding: 1rem;
+    bottom: -110px;
+  }
+  
+  .design-info.show {
+    bottom: -130px;
   }
   
   .design-title {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+  }
+  
+  .design-description {
+    font-size: 0.85rem;
+  }
+  
+  .fixed-info-panel .container {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .designs-header h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+  
+  .stats {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .stat {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .stat .number {
+    font-size: 1.8rem;
+  }
+  
+  .gallery-container {
+    height: calc(100vh - 320px);
+    min-height: 500px;
+  }
+  
+  .design-image {
+    width: 30vh;
+    height: 24vh;
+    min-width: 220px;
+    min-height: 330px;
+    border-radius: 12px;
+  }
+  
+  .design-item {
+    margin-right: 8vw;
+  }
+  
+  .design-item:first-child {
+    margin-left: 8vw;
+  }
+  
+  .design-category {
+    font-size: 0.7rem;
+  }
+  
+  .design-title {
+    font-size: 1.1rem;
+  }
+  
+  .design-description {
+    font-size: 0.8rem;
+  }
+  
+  .design-meta {
+    flex-direction: column;
+    gap: 0.5rem;
   }
   
   .download-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     font-size: 0.8rem;
+  }
+  
+  .fixed-info-panel {
+    bottom: 1rem;
+  }
+  
+  .fixed-info-panel .container {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .navigation-hint {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .designs-header {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .designs-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .gallery-container {
+    min-height: 450px;
+  }
+  
+  .design-image {
+    width: 28vh;
+    height: 22.4vh;
+    min-width: 200px;
+    min-height: 300px;
+  }
+  
+  .design-item {
+    margin-right: 6vw;
+  }
+  
+  .design-item:first-child {
+    margin-left: 6vw;
+  }
+  
+  .design-info {
+    padding: 0.8rem;
+  }
+  
+  .design-title {
+    font-size: 1rem;
+  }
+  
+  .instructions p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Portrait orientation on mobile */
+@media (max-width: 768px) and (orientation: portrait) {
+  .design-image {
+    width: 60vw; /* Use viewport width for better control */
+    height: 76.8vw; /* 1080/1375 = 0.786, so height = width * 1.275 */
+    min-width: 250px;
+    min-height: 320px;
+  }
+  
+  .designs-gallery {
+    padding: 0 3vw; /* Minimal padding on portrait */
+  }
+  
+  .design-item {
+    margin-right: 8vw;
+  }
+  
+  .design-item:first-child {
+    margin-left: 8vw;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .designs-header {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .gallery-container {
+    height: calc(100vh - 220px);
+    min-height: 400px;
+  }
+  
+  .design-image {
+    width: 40vh;
+    height: 32vh;
+    min-width: 200px;
+    min-height: 256px;
+  }
+  
+  .instructions {
+    padding: 0.8rem 0;
+  }
+  
+  .instructions p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .designs-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .design-image {
+    width: 25vh;
+    height: 20vh;
+    min-width: 180px;
+    min-height: 270px;
+  }
+  
+  .design-info {
+    padding: 0.6rem;
+  }
+  
+  .design-category {
+    font-size: 0.65rem;
+  }
+  
+  .download-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
   }
 }
