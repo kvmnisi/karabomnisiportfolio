@@ -307,73 +307,214 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
   .about-section {
-    padding: 4rem 0 2rem;
+    padding: 3rem 1.25rem 4rem;
   }
-  
+
+  /* Header layout */
   .about-header {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 1.5rem;
   }
-  
-  .avatar-placeholder {
-    width: 200px;
-    height: 200px;
-    font-size: 2.5rem;
+
+  .avatar-image {
+    width: 260px;
+    height: 260px;
   }
-  
+
   .about-intro h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
-  
+
+  .role-location {
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+  }
+
+  /* Social */
   .about-social {
     justify-content: center;
+    gap: 1.25rem;
   }
-  
-  .social-link {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
+
+  /* Content */
+  .content-section {
+    margin-bottom: 3rem;
   }
-  
+
   .content-section h2 {
-    font-size: 1.75rem;
+    font-size: 2.1rem;
   }
-  
-  .experiences-grid,
+
+  .content-section h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .content-section p {
+    text-align: center;
+  }
+
+  /* Grids */
   .studies-grid,
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
-  
-  .experience-card,
-  .study-card,
-  .skill-card {
-    padding: 1.5rem;
-  }
-  
+
   .languages-list {
     justify-content: center;
   }
-}
 
+}
 @media (max-width: 480px) {
+
+  .about-section {
+    padding: 2.5rem 1rem 3.5rem;
+  }
+
+  /* Avatar */
+  .avatar-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Headings */
+  .about-intro h1 {
+    font-size: clamp(2rem, 8vw, 2.4rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .role-location {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
+
+  /* Social links */
   .about-social {
-    flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
   }
-  
+
   .social-link {
-    width: 100%;
-    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
-  
+
+  /* Sections */
   .content-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
   }
-  
+
+  .content-section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* Experience cards */
+  .experience-card {
+    padding: 1.25rem;
+  }
+
   .experience-title h3 {
     font-size: 1.25rem;
   }
+
+  .company-timeframe {
+    font-size: 0.85rem;
+  }
+
+  .achievements-list li {
+    font-size: 0.9rem;
+  }
+
+  /* Study / Skill cards */
+  .study-card,
+  .skill-card {
+    padding: 1.25rem;
+  }
+
+  .study-card h3,
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Skill tags */
+  .skill-tag {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  /* Languages */
+  .language-item {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 3rem 1.25rem 4rem;
+  }
+
+  /* Header layout */
+  .about-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar-image {
+    width: 260px;
+    height: 260px;
+  }
+
+  .about-intro h1 {
+    font-size: 2.8rem;
+  }
+
+  .role-location {
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+  }
+
+  /* Social */
+  .about-social {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  /* Content */
+  .content-section {
+    margin-bottom: 3rem;
+  }
+
+  .content-section h2 {
+    font-size: 2.1rem;
+  }
+
+  .content-section h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .content-section p {
+    text-align: center;
+  }
+
+  /* Grids */
+  .studies-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .languages-list {
+    justify-content: center;
+  }
+
 }

@@ -82,7 +82,7 @@ return (
 <span className="hero-eyebrow">Karabo Mnisi's Portfolio</span>
     <h1 className="hero-title">
       DESIGNING, BUILDING,<br />
-      <span>AND COMMUNICATING</span><br />
+      <span>AND SHARING</span><br />
       DIGITAL EXPERIENCES.
     </h1>
 
