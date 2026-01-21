@@ -81,9 +81,9 @@ return (
 <div className="hero-content">
 <span className="hero-eyebrow">Karabo Mnisi's Portfolio</span>
     <h1 className="hero-title">
-      Designing, building,<br />
-      <span>and communicating</span><br />
-      digital experiences
+      DESIGNING, BUILDING,<br />
+      <span>AND COMMUNICATING</span><br />
+      DIGITAL EXPERIENCES.
     </h1>
 
     <p className="hero-subtitle">

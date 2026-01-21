@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/navbar';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import DesignGallery from './components/DesignGallery/DesignGallery';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import YouTubeThumbnailsPage from './pages/YouTubeThumbnailsPage';
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
               <Navbar />
               <Hero />
               <About />
+              <Contact />
               <Footer />
             </>
           } />

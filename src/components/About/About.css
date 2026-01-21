@@ -33,7 +33,7 @@
 }
 
 .about-intro h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #ff3333 0%, var(--accent-amber) 100%);
   -webkit-background-clip: text;
@@ -46,7 +46,7 @@
   align-items: center;
   gap: 0.75rem;
   color: var(--foreground-weak);
-  font-size: 1.1rem;
+  font-size: 2rem;
 }
 
 .role-location i {
@@ -61,7 +61,7 @@
 .about-social {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--border);
@@ -112,7 +112,7 @@
 .content-section:nth-child(5) { --section-index: 5; }
 
 .content-section h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   color: var(--foreground);
   position: relative;
@@ -131,6 +131,7 @@
 }
 
 .content-section p {
+  font-family: 'Alike';
   color: var(--foreground-weak);
   line-height: 1.8;
   margin-bottom: 1.5rem;

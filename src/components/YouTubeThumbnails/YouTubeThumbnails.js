@@ -51,6 +51,7 @@ const YouTubeThumbnails = () => {
   ];
 
   useEffect(() => {
+    window.scrollTo(0,0);
     const fetchMyVideos = async () => {
       // If no API key, use fallback
       if (!API_KEY) {

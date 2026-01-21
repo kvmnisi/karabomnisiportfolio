@@ -57,11 +57,11 @@ const About = () => {
 
   const studies = [
     {
-      name: "Computer Science Degree | University of the Witwatersrand",
+      name: "BSc in Computer Science Degree | University of the Witwatersrand",
       description: "Through my Bachelor of Science studies at the University of the Witwatersrand, I developed a strong interdisciplinary foundation spanning computer science, mathematics, and psychology, with an emphasis on analytical thinking, problem-solving, and structured reasoning."
     },
     {
-      name: "Gnerative AI Course For Software Engineers",
+      name: "Generative AI Course For Software Engineers",
       description: ": Practical training in AI prompt engineering for code comprehension, debugging, refactoring, and documentation. Developed skills in AI-assisted software development, learning new technologies efficiently, and improving code quality, maintainability, and developer productivity. "
     }
   ];
@@ -197,37 +197,37 @@ const About = () => {
         </div>
 
         {/* Social Links */}
-        <div className="about-social">
-          {socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <i className={social.icon}></i>
-              <span>{social.name}</span>
-            </a>
-          ))}
-        </div>
+        <div className="social-links">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+                aria-label={social.name}
+              >
+                <i className={social.icon}></i>
+              </a>
+            ))}
+          </div>
 
         {/* Introduction */}
         <div className="about-content">
           <div className="content-section intro-section">
             <h2>Introduction</h2>
             <p>
-              I'm Karabo, a Computer Science graduate from Johannesburg with a passion for creating 
-              digital experiences at the intersection of technology, design, and esports. My journey 
+              I'm Karabo, a Wits University Computer Science graduate from Johannesburg with a passion for creating 
+              digital experiences at the intersection of technology, design, and sports. My journey 
               combines technical expertise with creative problem-solving to build solutions that are 
               both functional and visually compelling.
             </p>
             <p>
-              For teams and hiring managers seeking a motivated graduate, I am a high-drive Computer Science graduate who aligns technical ability with organisational culture by combining disciplined learning, real-world digital execution, and a proven willingness to grow, contribute, and add value beyond my role.
+              For team leaders and hiring managers seeking young, motivated team members, I am a canditate who aligns technical ability with organisational culture by combining disciplined learning, real-world digital execution, and a proven willingness to grow, contribute, and add value beyond my role.
               With a strong foundation in both development and design, I focus on creating seamless 
               user experiences that bridge the gap between technical implementation and user needs. 
-              Whether it's developing web applications or designing intuitive interfaces, I strive to 
-              deliver solutions that make a real impact.
+              Whether it's working as an intern/understudy or assigned to a leadership role, I strive to 
+              deliver solutions that bring positive impact to our team goals.
             </p>
           </div>
 

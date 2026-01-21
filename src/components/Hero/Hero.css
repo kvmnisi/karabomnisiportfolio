@@ -40,8 +40,9 @@ color: var(--foreground-weak);
 }
 
 .hero-title {
+    font-family: 'Special Gothic Expanded One';
 font-size: clamp(3rem, 3vw, 4.5rem);
-font-weight: 100;
+font-weight: 900;
 line-height: 1.5;
 margin: 1.5rem 0;
 background: var(--foreground);
@@ -55,6 +56,7 @@ color: var(--accent-amber);
 }
 
 .hero-subtitle {
+font-weight: 400;
 max-width: 640px;
 margin: 0 auto 2.5rem;
 color: var(--foreground-weak);

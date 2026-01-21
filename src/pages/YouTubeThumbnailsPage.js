@@ -8,31 +8,13 @@ const YouTubeThumbnailsPage = () => {
 return (
 <div className="youtube-thumbnails-page">
 <Navbar />
-
-text
   <main className="youtube-thumbnails-main">
-    <div className="page-header">
-      <div className="container">
-        <h1>YouTube Thumbnail Portfolio</h1>
-        <p className="page-subtitle">
-          A showcase of YouTube thumbnail designs I've created for various channels
-        </p>
-        <div className="page-meta">
-          <span className="meta-item">
-            <i className="fas fa-paint-brush"></i>
-            Graphic Design
-          </span>
-          <span className="meta-item">
-            <i className="fab fa-youtube"></i>
-            YouTube Thumbnails
-          </span>
-          <span className="meta-item">
-            <i className="fas fa-layer-group"></i>
-            {10}+ Projects
-          </span>
-        </div>
-      </div>
-    </div>
+    <div className="hero-content">
+    <h1 className="hero-title">
+      YOUTUBE<br />
+      <span>THUMBNAILS</span><br />
+    </h1>
+  </div>
 
     <YouTubeThumbnails />
 
@@ -41,7 +23,7 @@ text
         <h2>Need Custom YouTube Thumbnails?</h2>
         <p>I create eye-catching thumbnails that increase click-through rates and engagement.</p>
         <div className="cta-buttons">
-          <a href="#contact" className="btn btn-ter">
+          <a href="mailto:mnisimediahouse@gmail.com" key = 'contact' className="btn btn-ter">
             <i className="fas fa-envelope"></i>
             Contact Me
           </a>

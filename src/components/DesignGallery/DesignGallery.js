@@ -65,66 +65,60 @@ const DesignGallery = () => {
   ];
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const images = imagesRef.current;
+  const gallery = sectionRef.current;
+  const images = imagesRef.current;
+  window.scrollTo(0,0);
+  if (!gallery) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-            
-            // Change background color based on data-color attribute
-            const color = entry.target.getAttribute("data-color");
-            if (color && section) {
-              section.style.backgroundColor = color;
-            }
-            
-            // Show design info
-          //   const designId = entry.target.getAttribute("data-id");
-          //   const designInfo = document.querySelector(`.design-info-${designId}`);
-          //   if (designInfo) {
-          //     designInfo.classList.add("show");
-          //   }
-          // } else {
-          //   entry.target.classList.remove("animate");
-          //   const designId = entry.target.getAttribute("data-id");
-          //   const designInfo = document.querySelector(`.design-info-${designId}`);
-          //   if (designInfo) {
-          //     designInfo.classList.remove("show");
-          //   }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+
+          const color = entry.target.getAttribute("data-color");
+          if (color) {
+            gallery.style.backgroundColor = color;
           }
-        });
-      },
-      {
-        threshold: 0.5,
-        rootMargin: "0px 0px -50% 0px"
-      }
-    );
-
-    // Observe all images
-    images.forEach((img) => {
-      if (img) observer.observe(img);
-    });
-
-    // Cleanup
-    return () => {
-      images.forEach((img) => {
-        if (img) observer.unobserve(img);
+        } else {
+          entry.target.classList.remove("animate");
+        }
       });
-    };
-  }, []);
+    },
+    {
+      root: gallery,               // 🔑 container-based, not viewport
+      threshold: 0.6,               // centered-ish
+      rootMargin: "-10% 0px -10% 0px" // tolerance above & below
+    }
+  );
+
+  images.forEach((img) => {
+    if (img) observer.observe(img);
+  });
+
+  return () => {
+    images.forEach((img) => {
+      if (img) observer.unobserve(img);
+    });
+  };
+}, []);
+
 
   return (
     <div className="designs-page">
       <Navbar />
       
-      <div className="designs-header">
-          <h1>Design Portfolio</h1>
-          <p className="subtitle">Skilled in Figma, Adobe Creative Cloud, and Canva for creating engaging designs, short and long form content across all social media platforms.
+      <div className="hero-content">
+    <h1 className="hero-title">
+      MY FAVOURITE,<br />
+      <span>SPORTS AND EVENT</span><br />
+      POSTERS.
+    </h1>
 
-</p>
-      </div>
+    <p className="hero-subtitle">
+     These are some of my favourite designs I have done since I began learning in 2023. I aim to make my next design always better than my last, but some of these will be tough to beat.These were made using <strong>Adobe Creative Cloud and Canva</strong> for short and long form content across all social media platforms.
+    </p>
+  </div>
 
       <main className="designs-main">
         {/* Instructions
@@ -167,21 +161,13 @@ const DesignGallery = () => {
             ))}
           </section>
         </div>
-
-      <div className="page-cta">
-        <h2>Need Custom YouTube Thumbnails?</h2>
-        <p>I create eye-catching thumbnails that increase click-through rates and engagement.</p>
+        <h2>CLICK THE LINK BELOW FOR THE FULL PORTFOLIO ON BEHANCE</h2>
         <div className="cta-buttons">
           <a href="https://behance.net/karabomnisi" className="btn btn-ter">
             <i className="fab fa-behance"></i>
             Full Behance Portfolio
           </a>
-          <a href="/" className="btn btn-secondary">
-            <i className="fas fa-arrow-left"></i>
-            Back to Home
-          </a>
         </div>
-    </div>
       </main>
       
       <Footer />

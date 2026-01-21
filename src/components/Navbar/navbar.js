@@ -26,31 +26,41 @@ path: '/youtube-thumbnails'
 
 // Update active link based on current route/location
 useEffect(() => {
-const path = location.pathname;
-const hash = location.hash.replace('#', '');
-if (path === '/youtube-thumbnails') {
-  setActiveLink('youtube-thumbnails');
-} else if (hash && navLinks.some(link => link.id === hash)) {
-  setActiveLink(hash);
-} else if (path === '/' || path === '') {
-  setActiveLink('home');
-}
-}, [location]);
+  const path = location.pathname;
+
+  if (path === '/youtube-thumbnails') {
+    setActiveLink('youtube-thumbnails');
+  } else if (path === '/designs') {
+    setActiveLink('designs');
+  } else {
+    setActiveLink('home');
+  }
+}, [location.pathname]);
+
 
 const handleHashLinkClick = (linkId) => {
-setActiveLink(linkId);
-setIsMobileMenuOpen(false);
-// If we're already on home page, just scroll to section
-if (location.pathname === '/') {
-  const element = document.getElementById(linkId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+  setActiveLink(linkId);
+  setIsMobileMenuOpen(false);
+
+  if (location.pathname === '/') {
+    // Already on home → scroll immediately
+    const element = document.getElementById(linkId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  } else {
+    // Navigate first, then scroll AFTER route change
+    navigate('/', { replace: false });
+
+    setTimeout(() => {
+      const element = document.getElementById(linkId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   }
-} else {
-  // If we're on another page, navigate to home with hash
-  navigate(`/#${linkId}`);
-}
 };
+
 
 const handlePageLinkClick = (linkId) => {
 setActiveLink(linkId);
@@ -93,7 +103,7 @@ setIsMobileMenuOpen(false);
             // Hash links for sections on home page
             <a
               key={link.id}
-              href={`/#${link.id}`}
+              href="#"
               className={`nav-link ${activeLink === link.id ? 'active' : ''}`}
               onClick={(e) => {
                 e.preventDefault();
