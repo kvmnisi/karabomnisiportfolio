@@ -83,7 +83,7 @@ return (
     <h1 className="hero-title">
       DESIGNING, BUILDING,<br />
       <span>AND SHARING</span><br />
-      DIGITAL EXPERIENCES.
+      DIGITAL CREATIONS.
     </h1>
 
     <p className="hero-subtitle">
