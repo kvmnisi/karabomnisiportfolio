@@ -1,29 +1,36 @@
 .about-section {
-  padding: 2rem 0 4rem;
+  padding: clamp(1rem, 5vw, 2rem) 0 clamp(3rem, 8vw, 4rem);
   background-color: var(--background);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Header */
 .about-header {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
   flex-wrap: wrap;
 }
 
 .about-avatar {
   flex-shrink: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .avatar-image {
   flex-shrink: 0;
-  width: 400px;
-  height: 400px;
+  width: min(400px, 90vw);
+  height: min(400px, 90vw);
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 5px 5px 20px var(--foreground, .2);
+  margin: 0 auto;
 }
 
 .avatar-img {
@@ -32,21 +39,32 @@
   object-fit: cover;
 }
 
+.about-intro {
+  flex: 1;
+  min-width: min(100%, 300px);
+  text-align: center;
+}
+
 .about-intro h1 {
-  font-size: 4rem;
+  font-size: clamp(2rem, 8vw, 4rem);
   margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #ff3333 0%, var(--accent-amber) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .role-location {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
   color: var(--foreground-weak);
-  font-size: 2rem;
+  font-size: clamp(1rem, 4vw, 2rem);
+  line-height: 1.4;
 }
 
 .role-location i {
@@ -61,23 +79,25 @@
 .about-social {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: clamp(1rem, 3vw, 3rem);
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--border);
+  justify-content: center;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(0.75rem, 2vw, 1.25rem);
   background-color: var(--surface-elevated);
   border: 1px solid var(--border);
   border-radius: 50px;
   color: var(--foreground-weak);
   text-decoration: none;
   transition: all 0.3s ease;
+  font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 .social-link:hover {
@@ -88,18 +108,19 @@
 }
 
 .social-link i {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--accent-violet);
 }
 
 /* Content Sections */
 .about-content {
-  max-width: 900px;
+  max-width: min(900px, 95vw);
   margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2rem);
 }
 
 .content-section {
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
   animation: fadeInUp 0.6s ease-out forwards;
   opacity: 0;
   animation-delay: calc(var(--section-index, 0) * 0.1s);
@@ -112,7 +133,7 @@
 .content-section:nth-child(5) { --section-index: 5; }
 
 .content-section h2 {
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 5vw, 3rem);
   margin-bottom: 1.5rem;
   color: var(--foreground);
   position: relative;
@@ -124,7 +145,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 60px;
+  width: min(60px, 15vw);
   height: 3px;
   background: linear-gradient(90deg, var(--accent-violet) 0%, var(--accent-amber) 100%);
   border-radius: 2px;
@@ -135,20 +156,21 @@
   color: var(--foreground-weak);
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 /* Work Experience */
 .experiences-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: clamp(1.5rem, 3vw, 2rem);
 }
 
 .experience-card {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 2rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
   transition: all 0.3s ease;
 }
 
@@ -163,14 +185,14 @@
 }
 
 .experience-title h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   margin-bottom: 0.5rem;
   color: var(--foreground);
 }
 
 .company-timeframe {
   color: var(--foreground-weak);
-  font-size: 0.95rem;
+  font-size: clamp(0.875rem, 2vw, 0.95rem);
 }
 
 .achievements-list {
@@ -185,6 +207,7 @@
   margin-bottom: 1rem;
   color: var(--foreground-weak);
   line-height: 1.6;
+  font-size: clamp(0.95rem, 2vw, 1rem);
 }
 
 .achievements-list li i {
@@ -197,15 +220,15 @@
 /* Studies */
 .studies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2rem);
 }
 
 .study-card {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 1.5rem);
   transition: all 0.3s ease;
 }
 
@@ -215,7 +238,7 @@
 }
 
 .study-card h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.125rem, 2.5vw, 1.25rem);
   margin-bottom: 0.75rem;
   color: var(--foreground);
 }
@@ -223,15 +246,15 @@
 /* Skills */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2rem);
 }
 
 .skill-card {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 1.5rem);
   transition: all 0.3s ease;
 }
 
@@ -241,7 +264,7 @@
 }
 
 .skill-card h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.125rem, 2.5vw, 1.25rem);
   margin-bottom: 0.75rem;
   color: var(--foreground);
 }
@@ -262,7 +285,7 @@
   border: 1px solid rgba(255, 204, 51, 0.2);
   border-radius: 50px;
   color: #fafafa;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 500;
 }
 
@@ -274,23 +297,25 @@
 .languages-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .language-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.75rem 1.5rem;
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 50px;
   color: var(--foreground-weak);
+  font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 .language-item i {
   color: var(--accent-violet);
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 /* Animations */
@@ -308,7 +333,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-section {
-    padding: 4rem 0 2rem;
+    padding: 2rem 0;
   }
   
   .about-header {
@@ -317,14 +342,18 @@
     gap: 1.5rem;
   }
   
-  .avatar-placeholder {
-    width: 200px;
-    height: 200px;
-    font-size: 2.5rem;
+  .avatar-image {
+    width: min(300px, 70vw);
+    height: min(300px, 70vw);
   }
   
   .about-intro h1 {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+  
+  .role-location {
+    flex-direction: column;
+    gap: 0.5rem;
   }
   
   .about-social {
@@ -352,10 +381,6 @@
   .skill-card {
     padding: 1.5rem;
   }
-  
-  .languages-list {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 480px) {
@@ -365,7 +390,7 @@
   }
   
   .social-link {
-    width: 100%;
+    width: min(100%, 300px);
     justify-content: center;
   }
   
@@ -375,5 +400,18 @@
   
   .experience-title h3 {
     font-size: 1.25rem;
+  }
+  
+  .skill-tags {
+    justify-content: center;
+  }
+  
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .languages-list {
+    flex-direction: column;
+    align-items: center;
   }
 }
