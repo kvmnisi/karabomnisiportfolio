@@ -54,8 +54,8 @@ const DesignGallery = () => {
       id: 5,
       title: "Typography Design",
       description: "Custom typeface for a publication",
-      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_auto,w_432,h_540,q_80/recap_poster-Recovered_ypn9ks.png",
-      dataColor: "#402a04",
+      image: "https://res.cloudinary.com/dcfvhjvff/image/upload/c_fill,g_auto,w_432,h_840,q_80/IMG_2503_p3du1k.png",
+      dataColor: "#b0e6db",
       category: "Typography",
       year: "2023",
       client: "TypeMag",
@@ -110,7 +110,7 @@ const DesignGallery = () => {
       
       <div className="hero-content">
     <h1 className="hero-title">
-      MY FAVOURITE<br />
+      MY FAVOURITE,<br />
       <span>SPORTS AND EVENT</span><br />
       POSTERS.
     </h1>
