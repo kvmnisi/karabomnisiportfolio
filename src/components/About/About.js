@@ -22,7 +22,7 @@ const About = () => {
   const workExperiences = [
     {
       company: "University Projects",
-      timeframe: "2020 - Present",
+      timeframe: "2021 - Present",
       role: "Student Developer & Designer",
       achievements: [
         "Developed multiple web applications using React, Node.js, and modern JavaScript frameworks",
@@ -57,7 +57,11 @@ const About = () => {
 
   const studies = [
     {
-      name: "BSc in Computer Science Degree | University of the Witwatersrand",
+      name: "BSc (Honours) in Computer Science | University of the Witwatersrand | In Progress",
+      description: "Currently ndertaking a full year Computer Science research project, while studying advanced topics in cybersecurity, cryptography, machine & reinforcement Learning, adaptive computation and computational intelligence.."
+    },
+    {
+      name: "BSc in Computer Science Degree | University of the Witwatersrand | Completed (2025)",
       description: "Through my Bachelor of Science studies at the University of the Witwatersrand, I developed a strong interdisciplinary foundation spanning computer science, mathematics, and psychology, with an emphasis on analytical thinking, problem-solving, and structured reasoning."
     },
     {
