@@ -66,7 +66,7 @@ const About = () => {
     },
     {
       name: "Generative AI Course For Software Engineers",
-      description: ": Practical training in AI prompt engineering for code comprehension, debugging, refactoring, and documentation. Developed skills in AI-assisted software development, learning new technologies efficiently, and improving code quality, maintainability, and developer productivity. "
+      description: "Practical training in AI prompt engineering for code comprehension, debugging, refactoring, and documentation. Developed skills in AI-assisted software development, learning new technologies efficiently, and improving code quality, maintainability, and developer productivity. "
     }
   ];
 
@@ -101,7 +101,7 @@ const About = () => {
   ]
 },
 {
-  title: "Software Design & Engineering",
+  title: "Software Design",
   description: "Applying structured software design principles, modular architecture, and collaborative development practices.",
   tags: [
     { name: "Software Design", icon: "fas fa-drafting-compass" },
